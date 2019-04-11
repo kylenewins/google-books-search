@@ -1,17 +1,15 @@
-import React, { Component } from "react";
-import Jumbotron from "./components/jumbotron"
-import Searchbar from "./components/searchbar"
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Search from "./pages/Search";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App container">
-        <Jumbotron />
-        <Searchbar />
+function App() {
+  return (
+    <Router>
+      <div>
+          <Route exact path="/" component={Search} />
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 export default App;
